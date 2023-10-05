@@ -1,12 +1,8 @@
 Feature: The Internet Guinea Pig Website
 
-  Scenario Outline: As a user, I can log into the secure area
+  Scenario: Como usuario quiero loguearme a la pagina de Amazon
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
-
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
+    Given entrar a la pagina de inicio
+    And el usuario da clic en Sing in
+    When me loguee con usuario y contraseña
+    Then yo debo de ver un mensaje de bienvenida <Hola Prueba>
